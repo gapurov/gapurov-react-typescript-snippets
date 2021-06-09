@@ -1,11 +1,8 @@
 {
-  "import react and styled components": {
-    "prefix": "imrsc",
-    "body": [
-      "import React from 'react'",
-      "import styled from 'styled-components'"
-    ],
-    "description": "import react and styled components"
+  "import react": {
+    "prefix": "imr",
+    "body": ["import * as React from 'react'"],
+    "description": "import react"
   },
   "React Function Component": {
     "prefix": "rfc",
@@ -38,27 +35,5 @@
       "export default $1;"
     ],
     "description": "Create a React Hooks Component."
-  },
-  "React Styled Component": {
-    "prefix": "rsc",
-    "body": [
-      "const StyledDiv = styled('div')`",
-      "  border: 3px solid red;",
-      "`",
-      "export type $1Props = { $2: $3 }",
-      "export const $1: React.FC<$1Props> = ({ $2 }) => {",
-      "    console.log({ $2 })",
-      "    const [${4}, set${4/(.*)/${4:/capitalize}/}] = React.useState($5);",
-      "    React.useEffect(() => {}, [])",
-      "    return (",
-      "        <StyledDiv>",
-      "            ${0}",
-      "        </StyledDiv>",
-      "    )",
-      "};",
-      "",
-      "export default $1;"
-    ],
-    "description": "Create a Styled React Component."
   }
 }
